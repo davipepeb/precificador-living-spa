@@ -771,12 +771,12 @@ elif page == "💰 Precificação Inteligente":
             total_service_cost_with_promo = service_cost * required_quantity
             spa_revenue_with_promo = total_promo_revenue - final_commission - total_service_cost_with_promo
             
-            # Exibe resultados
+          # Exibe resultados
             st.subheader("📈 Análise Sem Promoção")
             st.markdown(f"""
             <div class="success-card">
                 <h4>Cenário Atual (Preço Normal)</h4>
-                <p><strong>Demanda Esperada:</strong> {demand:.1f if is_custom_service else int(demand)} {service_name_plural}</p>
+                <p><strong>Demanda Esperada:</strong> {demand:{'.1f' if is_custom_service else '.0f'}} {service_name_plural}</p>
                 <p><strong>Receita Total:</strong> R$ {revenue_without_promo:,.2f}</p>
                 <p><strong>Comissão Massagista:</strong> R$ {commission_without_promo:,.2f}</p>
                 <p><strong>Custo por Serviço:</strong> R$ {total_service_cost_without_promo:,.2f}</p>
